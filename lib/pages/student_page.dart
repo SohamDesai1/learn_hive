@@ -25,12 +25,10 @@ class _StudentPageState extends State<StudentPage> {
         child: ListView.builder(
           itemBuilder: (context, index) {
             final student = studentBox.getAt(index);
-            return Column(
-              children: [
-                Text(student.rollNo.toString()),
-                Text(student.name.toString()),
-                Text(student.className.toString()),
-              ],
+            return ListTile(
+              leading: Text(student.id.toString()),
+              title: Text(student.name.toString()),
+              subtitle: Text(student.className.toString()),
             );
           },
         ),
